@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Lock, Puzzle, ArrowRight, Brain, Database, Share2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import videoAerochainPublic from '@/assets/videos/Video_AeroChain_Grand public.mp4';
 import documentAerochainGif from '@/assets/videos/Document Aero-chain.gif';
 import operationGif from '@/assets/videos/operation.gif';
 import maintenanceGif from '@/assets/videos/Maintenance.gif';
@@ -299,30 +298,6 @@ export default function AeroChain() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-8 pb-24 px-4 md:px-8 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-6">
-              Aero-Chain in Action
-            </h2>
-            <p className="text-base text-muted-foreground max-w-3xl mx-auto">
-              Discover how our platform revolutionizes aviation traceability and maintenance operations
-            </p>
-          </div>
-          <div className="relative rounded-xl overflow-hidden border border-border bg-card">
-            <video
-              controls
-              className="w-full h-auto"
-              poster=""
-              preload="metadata"
-            >
-              <source src={videoAerochainPublic} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
 
       <section className="py-8 pb-24 px-4 md:px-8 bg-card border-t border-border">
         <div className="max-w-4xl mx-auto text-center space-y-8">
