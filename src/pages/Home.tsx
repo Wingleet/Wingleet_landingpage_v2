@@ -26,7 +26,6 @@ import logoCentral from '@/assets/images/logos/Central.png';
 import logoAerochain from '@/assets/images/logos/Logo_Aerochain_color_no_bg.png';
 import logoERP from '@/assets/images/logos/ERP.png';
 import logoHub from '@/assets/images/logos/Hub.png';
-import videoAerochainExpert from '@/assets/videos/Video_Aerochain_Expert.mp4';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -180,38 +179,6 @@ export default function Home() {
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Discover how our platform revolutionizes aircraft traceability and compliance management
             </p>
-          </motion.div>
-          
-          <motion.div
-            className="relative max-w-5xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={scaleIn}
-          >
-            <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200">
-              <video
-                className="w-full h-auto"
-                controls
-                poster=""
-                preload="metadata"
-              >
-                <source src={videoAerochainExpert} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              
-              {/* Video overlay for enhanced styling */}
-              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            
-            {/* Optional: Add play button overlay */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <svg className="w-8 h-8 text-sky-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-            </div>
           </motion.div>
           
           <motion.div

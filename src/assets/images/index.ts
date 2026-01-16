@@ -41,6 +41,4 @@ export { default as logoHub } from './logos/Hub.png';
 // AMC logo
 export { default as logoAMC } from './logos/AMC.png';
 
-// Video
-export { default as videoAerochainExpert } from '../videos/Video_Aerochain_Expert.mp4';
 
