@@ -1,14 +1,9 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { TrendingUp, Users, Target, Rocket, ArrowRight, CheckCircle } from 'lucide-react';
+import { TrendingUp, Users, Rocket, CheckCircle } from 'lucide-react';
 import logoWingleet from '@/assets/images/logos/Logo_Wingleet_no_bg.png';
 import heroImage from '@/assets/images/logos/heroe_section.jpg';
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0 }
-};
 
 const staggerContainer = {
   hidden: { opacity: 0 },

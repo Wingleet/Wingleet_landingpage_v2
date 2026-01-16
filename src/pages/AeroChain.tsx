@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { FileText, CheckCircle, TrendingUp, Lock, Puzzle, Link as LinkIcon, ArrowRight, Brain, Wrench, Activity, Calendar, DollarSign, Database, Share2 } from 'lucide-react';
+import { CheckCircle, Lock, Puzzle, ArrowRight, Brain, Database, Share2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import videoAerochainPublic from '@/assets/videos/Video_AeroChain_Grand public.mp4';
 import documentAerochainGif from '@/assets/videos/Document Aero-chain.gif';

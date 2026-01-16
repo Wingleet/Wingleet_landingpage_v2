@@ -7,7 +7,6 @@ import { Plane, Shield, Network, ArrowRight, Calendar, CheckCircle } from 'lucid
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import heroBackground from '@/assets/images/logos/hero.png';
 import heroImage from '@/assets/images/avion.png';
 
 // Partner logos
@@ -674,7 +673,7 @@ export default function Home() {
                 { name: 'Station F', logo: logoStationF, description: 'World\'s Largest Startup Campus Partner' },
                 { name: 'CentralSupélec', logo: logoCentral, description: 'Engineering Excellence & Research Partner' },
                 { name: 'Paris-Saclay', logo: logoParisSaclay, description: 'Deep Tech Innovation Ecosystem Partner' }
-              ].map((partner, index) => {
+              ].map((partner) => {
                 const content = (
                   <div
                     key={`first-${partner.name}`}
