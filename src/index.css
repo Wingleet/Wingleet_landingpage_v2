@@ -1,0 +1,287 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* Airport font - using system font stack as fallback, replace with actual Airport font URL if available */
+@font-face {
+  font-family: 'Airport';
+  font-weight: 100 700;
+  font-style: normal;
+  src: local('Airport'), local('Airport-Regular');
+  /* If Airport font is available as a file, add src: url('path/to/Airport.woff2') format('woff2'); */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary colors - Gradient from Cyan to Electric Blue */
+  --primary: #28abe3;
+  --primary-gradient-start: #28abe3;
+  --primary-gradient-end: #0166E7;
+  
+  /* Radius */
+  --radius: 0.2rem;
+  
+  /* Light theme AeroChain - OKLCH */
+  --background: oklch(0.98 0.005 264);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.015 264);
+  --secondary-foreground: oklch(0.141 0.005 285.823);
+  --muted: oklch(0.96 0.01 264);
+  --muted-foreground: oklch(0.5 0.02 264);
+  --accent: oklch(0.94 0.02 264);
+  --accent-foreground: oklch(0.141 0.005 285.823);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.88 0.015 264);
+  --input: oklch(0.5 0.02 264);
+  --ring: #28abe3;
+  
+  /* Charts */
+  --chart-1: #f95d6a;
+  --chart-2: #7dd3ea;
+  --chart-3: #ffa600;
+  --chart-4: #ff7c43;
+  --chart-5: #d45087;
+}
+
+.dark {
+  /* Dark theme AeroChain - OKLCH */
+  --background: oklch(0.16 0.012 250);
+  --foreground: oklch(0.92 0.01 250);
+  --card: oklch(0.23 0.015 250);
+  --card-foreground: oklch(0.92 0.01 250);
+  --popover: oklch(0.23 0.015 250);
+  --popover-foreground: oklch(0.92 0.01 250);
+  --primary-foreground: oklch(0.16 0.012 250);
+  --secondary: oklch(0.3 0.015 250);
+  --secondary-foreground: oklch(0.92 0.01 250);
+  --muted: oklch(0.3 0.015 250);
+  --muted-foreground: oklch(0.64 0.015 250);
+  --accent: oklch(0.34 0.018 250);
+  --accent-foreground: oklch(0.92 0.01 250);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.92 0.01 250);
+  --border: oklch(1 0 0 / 11%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: #28abe3;
+}
+
+.navy {
+  /* Navy theme */
+  --background: #0c1b30;
+  --foreground: oklch(0.92 0.01 250);
+  --card: oklch(0.23 0.015 250);
+  --card-foreground: oklch(0.92 0.01 250);
+  --popover: oklch(0.23 0.015 250);
+  --popover-foreground: oklch(0.92 0.01 250);
+  --primary: #28abe3;
+  --primary-foreground: oklch(0.16 0.012 250);
+  --secondary: oklch(0.3 0.015 250);
+  --secondary-foreground: oklch(0.92 0.01 250);
+  --muted: oklch(0.3 0.015 250);
+  --muted-foreground: oklch(0.64 0.015 250);
+  --accent: oklch(0.34 0.018 250);
+  --accent-foreground: oklch(0.92 0.01 250);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.92 0.01 250);
+  --border: oklch(1 0 0 / 11%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: #28abe3;
+}
+
+.monokai {
+  /* Monokai theme */
+  --background: #222222;
+  --foreground: oklch(0.92 0.01 250);
+  --card: #191919;
+  --card-foreground: oklch(0.92 0.01 250);
+  --popover: #191919;
+  --popover-foreground: oklch(0.92 0.01 250);
+  --primary: #38b2c7;
+  --primary-foreground: #222222;
+  --secondary: oklch(0.3 0.015 250);
+  --secondary-foreground: oklch(0.92 0.01 250);
+  --muted: oklch(0.3 0.015 250);
+  --muted-foreground: oklch(0.64 0.015 250);
+  --accent: oklch(0.34 0.018 250);
+  --accent-foreground: oklch(0.92 0.01 250);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.92 0.01 250);
+  --border: oklch(1 0 0 / 11%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: #28abe3;
+}
+
+.moonlight {
+  /* Moonlight theme */
+  --background: #282c34;
+  --foreground: oklch(0.92 0.01 250);
+  --card: #353b45;
+  --card-foreground: oklch(0.92 0.01 250);
+  --popover: #353b45;
+  --popover-foreground: oklch(0.92 0.01 250);
+  --primary: #38b2c7;
+  --primary-foreground: #282c34;
+  --secondary: oklch(0.3 0.015 250);
+  --secondary-foreground: oklch(0.92 0.01 250);
+  --muted: oklch(0.3 0.015 250);
+  --muted-foreground: oklch(0.64 0.015 250);
+  --accent: oklch(0.34 0.018 250);
+  --accent-foreground: oklch(0.92 0.01 250);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.92 0.01 250);
+  --border: oklch(1 0 0 / 11%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: #28abe3;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* All text elements use JetBrains Mono */
+  h1, h2, h3, h4, h5, h6,
+  p,
+  span,
+  div,
+  button,
+  a,
+  label,
+  .ui-text,
+  [role="button"] {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+    line-height: 1.1;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+    line-height: 1.2;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+    line-height: 1.3;
+  }
+
+  /* Mono font for tables, code, inputs, data - Technical data */
+  .font-mono,
+  .font-data,
+  .font-technical,
+  [class*="table"]:not([class*="button"]),
+  [class*="Table"],
+  [class*="data-"],
+  [class*="technical"],
+  code,
+  pre,
+  input,
+  textarea,
+  select,
+  table,
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  th,
+  td,
+  .data-table,
+  .technical-data,
+  [data-technical],
+  [data-type="technical"],
+  [data-type="data"],
+  kbd,
+  samp {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-padding {
+    @apply py-8 pb-24;
+  }
+
+  .container-padding {
+    @apply px-4 md:px-8;
+  }
+
+  /* Primary gradient for buttons and accents */
+  .gradient-primary {
+    background: linear-gradient(to right, #28abe3, #0166E7);
+  }
+
+  .text-gradient-primary {
+    background: linear-gradient(to right, #28abe3, #0166E7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+/* Transitions */
+* {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+}
+
+/* Infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  display: flex;
+  width: fit-content;
+}
